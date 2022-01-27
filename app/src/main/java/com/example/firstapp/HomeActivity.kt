@@ -1,5 +1,6 @@
 package com.example.firstapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -13,5 +14,7 @@ class HomeActivity : AppCompatActivity() {
 
     fun makeAnotherToast(view: View) {
         Toast.makeText(this,"You Have come to the right Place",Toast.LENGTH_LONG).show()
+        var intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
     }
 }

@@ -2,6 +2,7 @@ package com.example.firstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,11 +20,13 @@ public class MainActivity extends AppCompatActivity {
     public void makeToast(View view) {
         Log.i(TAG,"makong toast");
         Toast.makeText(this, "Logging You in", Toast.LENGTH_SHORT).show();
+        //go to different activity
+        Intent myIntent = new Intent(this,HomeActivity.class);
+        startActivity(myIntent);
     }
 
     public void handleClick(View view) {
         Log.i(TAG,"handling  toast");
-
         Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show();
     }
 }
